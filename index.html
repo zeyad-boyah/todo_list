@@ -7,9 +7,14 @@
     <title>To do list</title>
 </head>
 <body>
+    <h1>To Do List</h1>
     <!-- put an input field with a button to add tasks -->
-     <input id="newTask" placeholder="Add your Task Here">
-     <button id="addTask" onclick="addTask()">Add</button>
+     <div class="inputFieldContainer">
+         <input id="newTask" placeholder="Add your Task Here">
+         <button id="addTask" onclick="addTask()">Add</button>
+     </div>
+     <!-- a container that will contain all the new divs for all the new tasks -->
+     <div id="taskContainer"></div>
     <script src="script.js"></script>
 </body>
 </html>

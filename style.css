@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 100px;
+}
+
+#taskContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+input, button{
+    border-radius: 5px;
+}
