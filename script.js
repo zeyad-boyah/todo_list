@@ -33,18 +33,24 @@ function addTask(){
     // make a "done button that doesn't delete the task but rather change the styling by toggle"
     let doneButton = document.createElement("button");
     doneButton.textContent = "Done";
+    doneButton.style.backgroundColor = "blue";
     doneButton.onclick = ()=>{
         if (taskField.style.textDecoration === "line-through") {
             taskField.style.textDecoration = "none"; 
+            doneButton.style.backgroundColor = "blue";
+            taskField.style.backgroundColor = "white"
         } else {
-            taskField.style.textDecoration = "line-through"; 
+            taskField.style.textDecoration = "line-through";
+            doneButton.style.backgroundColor = "green" 
+            taskField.style.backgroundColor = "greenyellow"
         }
     }
    
 
-    // Create the Delete button
+    // Create the Delete button that removes the "entire taskDiv"
     let deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
+    deleteButton.style.backgroundColor = "red"
     deleteButton.onclick = function () {
         taskDiv.remove(); 
     };
@@ -58,6 +64,7 @@ function addTask(){
     let taskContainer = document.getElementById("taskContainer");
     taskContainer.appendChild(taskDiv);
 
+    // clear the value of the main input field 
     currentTask.value = "";
 }
 
